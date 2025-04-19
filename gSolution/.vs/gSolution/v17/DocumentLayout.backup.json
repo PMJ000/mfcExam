@@ -3,8 +3,16 @@
   "WorkspaceRootPath": "C:\\Users\\lms\\Documents\\GitHub\\mfcExam\\gSolution\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{506CCC2D-492C-36B3-31A1-B53C89205E39}|MFCApplication1\\MFCApplication1.vcxproj|C:\\Users\\lms\\Documents\\GitHub\\mfcExam\\gSolution\\MFCApplication1\\CDlgImage.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{506CCC2D-492C-36B3-31A1-B53C89205E39}|MFCApplication1\\MFCApplication1.vcxproj|solutionrelative:MFCApplication1\\CDlgImage.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{506CCC2D-492C-36B3-31A1-B53C89205E39}|MFCApplication1\\MFCApplication1.vcxproj|C:\\Users\\lms\\Documents\\GitHub\\mfcExam\\gSolution\\MFCApplication1\\MFCApplication1Dlg.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{506CCC2D-492C-36B3-31A1-B53C89205E39}|MFCApplication1\\MFCApplication1.vcxproj|solutionrelative:MFCApplication1\\MFCApplication1Dlg.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{506CCC2D-492C-36B3-31A1-B53C89205E39}|MFCApplication1\\MFCApplication1.vcxproj|C:\\Users\\lms\\Documents\\GitHub\\mfcExam\\gSolution\\MFCApplication1\\CDlgImage.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{506CCC2D-492C-36B3-31A1-B53C89205E39}|MFCApplication1\\MFCApplication1.vcxproj|solutionrelative:MFCApplication1\\CDlgImage.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{506CCC2D-492C-36B3-31A1-B53C89205E39}|MFCApplication1\\MFCApplication1.vcxproj|C:\\Users\\lms\\Documents\\GitHub\\mfcExam\\gSolution\\MFCApplication1\\MFCApplication1Dlg.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
@@ -21,14 +29,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{506CCC2D-492C-36B3-31A1-B53C89205E39}|MFCApplication1\\MFCApplication1.vcxproj|C:\\Users\\lms\\Documents\\GitHub\\mfcExam\\gSolution\\MFCApplication1\\MFCApplication1.rc||{177559E0-D141-11D0-92DF-00A0C9138C45}|,   b e g i n       % \u0084 2$  \u0022     ",
       "RelativeMoniker": "D:0:0:{506CCC2D-492C-36B3-31A1-B53C89205E39}|MFCApplication1\\MFCApplication1.vcxproj|solutionrelative:MFCApplication1\\MFCApplication1.rc||{177559E0-D141-11D0-92DF-00A0C9138C45}|,   b e g i n       % \u0084 2$  \u0022     "
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{506CCC2D-492C-36B3-31A1-B53C89205E39}|MFCApplication1\\MFCApplication1.vcxproj|C:\\Users\\lms\\Documents\\GitHub\\mfcExam\\gSolution\\MFCApplication1\\CDlgImage.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{506CCC2D-492C-36B3-31A1-B53C89205E39}|MFCApplication1\\MFCApplication1.vcxproj|solutionrelative:MFCApplication1\\CDlgImage.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{506CCC2D-492C-36B3-31A1-B53C89205E39}|MFCApplication1\\MFCApplication1.vcxproj|C:\\Users\\lms\\Documents\\GitHub\\mfcExam\\gSolution\\MFCApplication1\\CDlgImage.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{506CCC2D-492C-36B3-31A1-B53C89205E39}|MFCApplication1\\MFCApplication1.vcxproj|solutionrelative:MFCApplication1\\CDlgImage.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     }
   ],
   "DocumentGroupContainers": [
@@ -38,7 +38,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 4,
+          "SelectedChildIndex": 3,
           "Children": [
             {
               "$type": "Bookmark",
@@ -46,58 +46,57 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 6,
               "Title": "MFCApplication1.rc - IDD_ABOUTBOX - Dialog",
               "DocumentMoniker": "C:\\Users\\lms\\Documents\\GitHub\\mfcExam\\gSolution\\MFCApplication1\\MFCApplication1.rc",
               "RelativeDocumentMoniker": "MFCApplication1\\MFCApplication1.rc",
               "ToolTip": "C:\\Users\\lms\\Documents\\GitHub\\mfcExam\\gSolution\\MFCApplication1\\MFCApplication1.rc - IDD_ABOUTBOX - Dialog",
               "RelativeToolTip": "MFCApplication1\\MFCApplication1.rc - IDD_ABOUTBOX - Dialog",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001005|",
-              "WhenOpened": "2025-04-19T03:22:10.688Z",
-              "EditorCaption": " - IDD_ABOUTBOX - Dialog"
+              "WhenOpened": "2025-04-19T03:22:10.688Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 2,
               "Title": "CDlgImage.h",
               "DocumentMoniker": "C:\\Users\\lms\\Documents\\GitHub\\mfcExam\\gSolution\\MFCApplication1\\CDlgImage.h",
               "RelativeDocumentMoniker": "MFCApplication1\\CDlgImage.h",
               "ToolTip": "C:\\Users\\lms\\Documents\\GitHub\\mfcExam\\gSolution\\MFCApplication1\\CDlgImage.h",
               "RelativeToolTip": "MFCApplication1\\CDlgImage.h",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB4AAAACAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAHAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
               "WhenOpened": "2025-04-18T12:00:14.639Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 0,
               "Title": "CDlgImage.cpp",
               "DocumentMoniker": "C:\\Users\\lms\\Documents\\GitHub\\mfcExam\\gSolution\\MFCApplication1\\CDlgImage.cpp",
               "RelativeDocumentMoniker": "MFCApplication1\\CDlgImage.cpp",
-              "ToolTip": "C:\\Users\\lms\\Documents\\GitHub\\mfcExam\\gSolution\\MFCApplication1\\CDlgImage.cpp",
-              "RelativeToolTip": "MFCApplication1\\CDlgImage.cpp",
-              "ViewState": "AgIAACIAAAAAAAAAAAAAAC4AAAABAAAAAAAAAA==",
+              "ToolTip": "C:\\Users\\lms\\Documents\\GitHub\\mfcExam\\gSolution\\MFCApplication1\\CDlgImage.cpp*",
+              "RelativeToolTip": "MFCApplication1\\CDlgImage.cpp*",
+              "ViewState": "AgIAAEoAAAAAAAAAAAAIwF8AAAAaAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
               "WhenOpened": "2025-04-18T12:00:06.65Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "MFCApplication1Dlg.cpp",
               "DocumentMoniker": "C:\\Users\\lms\\Documents\\GitHub\\mfcExam\\gSolution\\MFCApplication1\\MFCApplication1Dlg.cpp",
               "RelativeDocumentMoniker": "MFCApplication1\\MFCApplication1Dlg.cpp",
-              "ToolTip": "C:\\Users\\lms\\Documents\\GitHub\\mfcExam\\gSolution\\MFCApplication1\\MFCApplication1Dlg.cpp*",
-              "RelativeToolTip": "MFCApplication1\\MFCApplication1Dlg.cpp*",
-              "ViewState": "AgIAAL4AAAAAAAAAAAAAAMYAAAACAAAAAAAAAA==",
+              "ToolTip": "C:\\Users\\lms\\Documents\\GitHub\\mfcExam\\gSolution\\MFCApplication1\\MFCApplication1Dlg.cpp",
+              "RelativeToolTip": "MFCApplication1\\MFCApplication1Dlg.cpp",
+              "ViewState": "AgIAAL8AAAAAAAAAAAAAANcAAAAQAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
               "WhenOpened": "2025-04-18T11:20:42.188Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 3,
               "Title": "MFCApplication1Dlg.h",
               "DocumentMoniker": "C:\\Users\\lms\\Documents\\GitHub\\mfcExam\\gSolution\\MFCApplication1\\MFCApplication1Dlg.h",
               "RelativeDocumentMoniker": "MFCApplication1\\MFCApplication1Dlg.h",
@@ -110,27 +109,25 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 4,
               "Title": "MFCApplication1.rc - IDD_CDlgImage - Dialog",
               "DocumentMoniker": "C:\\Users\\lms\\Documents\\GitHub\\mfcExam\\gSolution\\MFCApplication1\\MFCApplication1.rc",
               "RelativeDocumentMoniker": "MFCApplication1\\MFCApplication1.rc",
               "ToolTip": "C:\\Users\\lms\\Documents\\GitHub\\mfcExam\\gSolution\\MFCApplication1\\MFCApplication1.rc - IDD_CDlgImage - Dialog",
               "RelativeToolTip": "MFCApplication1\\MFCApplication1.rc - IDD_CDlgImage - Dialog",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001005|",
-              "WhenOpened": "2025-04-18T11:46:46.521Z",
-              "EditorCaption": " - IDD_CDlgImage - Dialog"
+              "WhenOpened": "2025-04-18T11:46:46.521Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 5,
               "Title": "MFCApplication1.rc - IDD_MFCAPPLICATION1_DIALOG - Dialog",
               "DocumentMoniker": "C:\\Users\\lms\\Documents\\GitHub\\mfcExam\\gSolution\\MFCApplication1\\MFCApplication1.rc",
               "RelativeDocumentMoniker": "MFCApplication1\\MFCApplication1.rc",
               "ToolTip": "C:\\Users\\lms\\Documents\\GitHub\\mfcExam\\gSolution\\MFCApplication1\\MFCApplication1.rc - IDD_MFCAPPLICATION1_DIALOG - Dialog",
               "RelativeToolTip": "MFCApplication1\\MFCApplication1.rc - IDD_MFCAPPLICATION1_DIALOG - Dialog",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001005|",
-              "WhenOpened": "2025-04-19T02:58:57.978Z",
-              "EditorCaption": " - IDD_MFCAPPLICATION1_DIALOG - Dialog"
+              "WhenOpened": "2025-04-19T02:58:57.978Z"
             }
           ]
         }

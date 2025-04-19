@@ -62,6 +62,7 @@ void CDlgImage::OnPaint()
 	if (m_image) {
 		m_image.Draw(dc, 0, 0);
 	}
+	drawData(&dc);
 }
 void CDlgImage::InitImage()
 {
@@ -87,4 +88,17 @@ void CDlgImage::InitImage()
 	unsigned char* fm = (unsigned char*)m_image.GetBits();
 
 	memset(fm, 255, nWidth * nHeight);
+}
+void CDlgImage::drawData(CDC* pDC)
+{
+	CRect rect;
+	CPen pen;
+	pen.CreatePen(PS_SOLID, 5, RGB(0xff, 0, 0));
+	CPen* pOldPen = pDC->SelectObject(&pen);
+	for (int i = 0;i < m_nDataCount;i++) {
+		rect.SetRect(m_ptData[i],m_ptData[i]);
+		rect.InflateRect(5, 5);
+		pDC->Ellipse(rect);
+	}
+	pDC->SelectObject(pOldPen);
 }
