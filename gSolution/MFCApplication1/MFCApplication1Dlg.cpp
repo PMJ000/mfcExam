@@ -8,6 +8,9 @@
 #include "MFCApplication1Dlg.h"
 #include "afxdialogex.h"
 #include <iostream>
+#include "CProcess.h"
+#include <chrono>
+using namespace std;
 
 #ifdef _DEBUG
 #define new DEBUG_NEW
@@ -71,6 +74,7 @@ BEGIN_MESSAGE_MAP(CMFCApplication1Dlg, CDialogEx)
 	ON_BN_CLICKED(IDC_BTN_PROCESS, &CMFCApplication1Dlg::OnBnClickedBtnProcess)
 	ON_BN_CLICKED(IDC_BTN_MAkE_PATTEN, &CMFCApplication1Dlg::OnBnClickedBtnMakePatten)
 	ON_BN_CLICKED(IDC_BTN_GET_DATA, &CMFCApplication1Dlg::OnBnClickedBtnGetData)
+	ON_BN_CLICKED(IDC_BTN_THREAD, &CMFCApplication1Dlg::OnBnClickedBtnThread)
 END_MESSAGE_MAP()
 
 
@@ -219,8 +223,7 @@ void CMFCApplication1Dlg::OnBnClickedBtnTest()
 	m_pDlgImage->Invalidate();
 	m_pDlgImgResult->Invalidate();
 }
-#include "CProcess.h"
-#include <chrono>
+
 void CMFCApplication1Dlg::OnBnClickedBtnProcess()
 {
 	// TODO: 여기에 컨트롤 알림 처리기 코드를 추가합니다.
@@ -277,4 +280,49 @@ void CMFCApplication1Dlg::OnBnClickedBtnGetData()
 	double dCenterY = (double)nSumY / nCount;
 
 	cout << dCenterX << "\t" << dCenterY << endl;
+}
+#include <thread>
+using namespace chrono;
+void threadProcess(CWnd* pParent,CRect rect)
+{
+	CMFCApplication1Dlg* pWnd = (CMFCApplication1Dlg*)pParent;
+	int nRet = pWnd->processImg(rect);
+
+	cout << "th0 : " << nRet << endl;
+}
+void CMFCApplication1Dlg::OnBnClickedBtnThread()
+{
+	// TODO: 여기에 컨트롤 알림 처리기 코드를 추가합니다.
+	auto start = system_clock::now();
+
+	int nImgSize = 4090 * 4;
+	CRect rect(0, 0, nImgSize, nImgSize);
+	CRect rt[4];
+	for (int k = 0; k < 4; k++) {
+		rt[k] = rect;
+		rt[k].OffsetRect(nImgSize*(k%2), nImgSize * int(k / 2));
+	}
+	// 위와 동일하다.
+	//rt[0].SetRect(0,0, nImgSize, nImgSize);
+	//rt[1].SetRect(nImgSize, 0, nImgSize*2, nImgSize);
+	//rt[2].SetRect(0, nImgSize, nImgSize, nImgSize*2);
+	//rt[3].SetRect(nImgSize, nImgSize, nImgSize*2, nImgSize*2);
+	thread _thread0(threadProcess, this, rt[0]);
+	_thread0.join();
+	//thread _thread0(threadProcess, this, rt[1]);
+	//thread _thread0(threadProcess, this, rt[2]);
+	//thread _thread0(threadProcess, this, rt[3]);
+
+
+
+	auto end = system_clock::now();
+	auto millisec = duration_cast<milliseconds>(end - start);
+	cout << "총 :" << millisec.count() << endl;
+}
+int CMFCApplication1Dlg::processImg(CRect rect)
+{
+	CProcess process;
+	int nRet = process.getStarInfo(&m_pDlgImage->m_image, 0, rect);
+
+	return nRet;
 }

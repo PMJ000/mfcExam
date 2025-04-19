@@ -9,6 +9,7 @@ public:
 	virtual ~CProcess();
 
 	int getStarInfo(CImage *pimage, int nTh = 100);
+	int getStarInfo(CImage* pimage, int nTh ,CRect rect);
 };
 
 

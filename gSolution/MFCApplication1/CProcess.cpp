@@ -30,5 +30,22 @@ int CProcess::getStarInfo(CImage *pimage, int nTh)
 	}
 	return nSum;
 }
+int CProcess::getStarInfo(CImage* pimage, int nTh,CRect rect)
+{
+	unsigned char* fm = (unsigned char*)pimage->GetBits();
+	int nWidth = pimage->GetWidth();
+	int nHeight = pimage->GetHeight();
+	int nPitch = pimage->GetPitch();
+
+	int nSum = 0;
+	for (int j = rect.top;j < rect.bottom;j++) {
+		for (int i = rect.left;i < rect.right;i++) {
+			if (fm[j * nPitch + i] > nTh) {
+				nSum++;
+			}
+		}
+	}
+	return nSum;
+}
 
 // CProcess 멤버 함수
