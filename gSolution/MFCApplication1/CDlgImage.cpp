@@ -37,7 +37,7 @@ END_MESSAGE_MAP()
 
 void CDlgImage::OnBnClickedBtnUpParent()
 {
-	static int n = 100;
+	static int n = MAX_POINT;
 	CMFCApplication1Dlg* pDlg = (CMFCApplication1Dlg*)m_pParent;
 	pDlg->callFunc(n++);
 	// TODO: 여기에 컨트롤 알림 처리기 코드를 추가합니다.
@@ -89,11 +89,12 @@ void CDlgImage::InitImage()
 
 	memset(fm, 255, nWidth * nHeight);
 }
+
 void CDlgImage::drawData(CDC* pDC)
 {
 	CRect rect;
 	CPen pen;
-	pen.CreatePen(PS_SOLID, 5, RGB(0xff, 0, 0));
+	pen.CreatePen(PS_SOLID, 5, COLOR_GREEN);
 	CPen* pOldPen = pDC->SelectObject(&pen);
 	for (int i = 0;i < m_nDataCount;i++) {
 		rect.SetRect(m_ptData[i],m_ptData[i]);
