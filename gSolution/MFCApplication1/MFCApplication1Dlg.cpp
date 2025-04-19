@@ -68,6 +68,9 @@ BEGIN_MESSAGE_MAP(CMFCApplication1Dlg, CDialogEx)
 	ON_WM_QUERYDRAGICON()
 	ON_WM_DESTROY()
 	ON_BN_CLICKED(IDC_BTN_TEST, &CMFCApplication1Dlg::OnBnClickedBtnTest)
+	ON_BN_CLICKED(IDC_BTN_PROCESS, &CMFCApplication1Dlg::OnBnClickedBtnProcess)
+	ON_BN_CLICKED(IDC_BTN_MAkE_PATTEN, &CMFCApplication1Dlg::OnBnClickedBtnMakePatten)
+	ON_BN_CLICKED(IDC_BTN_GET_DATA, &CMFCApplication1Dlg::OnBnClickedBtnGetData)
 END_MESSAGE_MAP()
 
 
@@ -205,7 +208,7 @@ void CMFCApplication1Dlg::OnBnClickedBtnTest()
 			{
 				if (m_pDlgImgResult->m_nDataCount < MAX_POINT)
 				{
-					cout << nIndex << ":" << i << "," << j << endl;
+					/*cout << nIndex << ":" << i << "," << j << endl;*/
 					m_pDlgImgResult->m_ptData[nIndex].x = i;
 					m_pDlgImgResult->m_ptData[nIndex].y = j;
 					m_pDlgImgResult->m_nDataCount = ++nIndex;
@@ -215,4 +218,63 @@ void CMFCApplication1Dlg::OnBnClickedBtnTest()
 	}
 	m_pDlgImage->Invalidate();
 	m_pDlgImgResult->Invalidate();
+}
+#include "CProcess.h"
+#include <chrono>
+void CMFCApplication1Dlg::OnBnClickedBtnProcess()
+{
+	// TODO: 여기에 컨트롤 알림 처리기 코드를 추가합니다.
+	CProcess process;
+
+	auto start = std::chrono::system_clock::now();
+	int nRet = process.getStarInfo(&m_pDlgImage->m_image,100);
+	auto end = std::chrono::system_clock::now();
+	auto millisec = std::chrono::duration_cast < std::chrono::milliseconds > (end - start);
+	cout << nRet << "\t" << millisec.count() << "ms" << endl;
+}
+
+void CMFCApplication1Dlg::OnBnClickedBtnMakePatten()
+{
+	// TODO: 여기에 컨트롤 알림 처리기 코드를 추가합니다.
+	unsigned char* fm = (unsigned char*)m_pDlgImage->m_image.GetBits();
+	int nWidth = m_pDlgImage->m_image.GetWidth();
+	int nHeight = m_pDlgImage->m_image.GetHeight();
+	int nPitch = m_pDlgImage->m_image.GetPitch();
+	memset(fm, 0, nWidth * nHeight);
+	
+	CRect rect(100, 100, 200, 200);
+	for (int j = rect.top;j < rect.bottom;j++) {
+		for (int i = rect.left;i < rect.right;i++) {
+			fm[j * nPitch + i] = rand()%0xff;
+		}
+	}
+	m_pDlgImage->Invalidate();
+}
+
+void CMFCApplication1Dlg::OnBnClickedBtnGetData()
+{
+	// TODO: 여기에 컨트롤 알림 처리기 코드를 추가합니다.
+	unsigned char* fm = (unsigned char*)m_pDlgImage->m_image.GetBits();
+	int nWidth = m_pDlgImage->m_image.GetWidth();
+	int nHeight = m_pDlgImage->m_image.GetHeight();
+	int nPitch = m_pDlgImage->m_image.GetPitch();
+
+	int nTh = 0x80;
+	CRect rect(0, 0, nWidth, nHeight);
+	int nSumX = 0;
+	int nSumY = 0;
+	int nCount = 0;
+	for (int j = rect.top;j < rect.bottom;j++) {
+		for (int i = rect.left;i < rect.right;i++) {
+			if (fm[j * nPitch + i] > nTh) {
+				nSumX += i;
+				nSumY += j;
+				nCount++;
+			}
+		}
+	}
+	double dCenterX = (double)nSumX / nCount;
+	double dCenterY = (double)nSumY / nCount;
+
+	cout << dCenterX << "\t" << dCenterY << endl;
 }

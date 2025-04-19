@@ -11,6 +11,9 @@
 #define IDC_BTN_UP_PARENT               1001
 #define IDC_BUTTON1                     1002
 #define IDC_BTN_TEST                    1002
+#define IDC_BTN_PROCESS                 1003
+#define IDC_BTN_MAkE_PATTEN             1004
+#define IDC_BTN_GET_DATA                1005
 
 // Next default values for new objects
 // 
